@@ -1,4 +1,4 @@
-package model.impl;
+/*package model.impl;
 
 import java.util.Date;
 import java.util.UUID;
@@ -30,4 +30,4 @@ public class AssuranceVie extends Compte {
         this.setMontant(previous - parMontant);
         return this.getMontant();
     }
-}
+}*/

@@ -11,4 +11,5 @@ public interface CompteItf
     void setBalance(double newBalance);
 
     double deposit(double amount);
+
 }

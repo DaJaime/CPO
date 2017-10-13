@@ -1,41 +1,24 @@
-package model;
+package model.impl;
 
 import model.dec.CompteManip;
-import model.impl.Compte;
 
-public final class CompteEpargne extends Compte
+public final class CompteEpargne extends Compte implements CompteManip
 {
-	private final float interestRates;
+	private float interestRates = 0;
 
-	public CompteEpargne (String owner, double initalBalance, float interestRates)
+	public CompteEpargne (String owner, double initalBalance, float parInterestRates)
     {
         super(owner, initalBalance);
-        if (interestRates > 0)
-        {
-        	 this.interestRates = interestRates;
-        }
-        else
-        {
-        	System.out.println ("Erreur : Taux d'interêt nul ou négatif !");
-        	break;
-        }
+        interestRates = parInterestRates;
     }
 
-    public CompteEpargne (String owner, float interestRates)
+    public CompteEpargne (String owner, float parInterestRates)
     {
     	super(owner);
-    	if (interestRates > 0)
-        {
-        	 this.interestRates = interestRates;
-        }
-        else
-        {
-        	System.out.println ("Erreur : Taux d'interêt nul ou négatif !");
-        	break;
-        }
+        interestRates = parInterestRates;
     }
 
-    public getInterestRates ()
+    public float getInterestRates ()
     {
         return this.interestRates;
     }
@@ -53,6 +36,7 @@ public final class CompteEpargne extends Compte
             this.setBalance(previous - amount);
             return this.getBalance();
         }
+        return 0d;
     }
 
     @Override
@@ -67,7 +51,7 @@ public final class CompteEpargne extends Compte
     public String toString()
     {
         StringBuilder sb = new StringBuilder();
-        sb = super().tostring();
+        sb.append(super.toString());
         sb.append(" Interêt d'épargne : ").append(this.interestRates).append("%\n");
         return sb.toString(); //Retouner avec le .toString() car c'est un stringBuilder (ATTENTION !!)
     }
