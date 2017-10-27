@@ -1,5 +1,8 @@
 package model.impl;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,7 +22,25 @@ public abstract class Compte implements CompteItf
     {
         this.owner = owner;
         this.balance = initialBalance;
-        this.num = UUID.randomUUID().toString();
+        String numVar = UUID.randomUUID().toString();
+        this.num = numVar;
+
+        String fileSep = File.separator;
+        File f = new File(".."+fileSep+".."+fileSep+".."+fileSep+"fichier"+fileSep + numVar +".txt");
+        try {
+            boolean cree = f.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        FileWriter fW = null;
+        try {
+            fW = new FileWriter(".."+fileSep+".."+fileSep+".."+fileSep+"fichier"+fileSep+ numVar +".txt");
+            fW.write(owner+" "+numVar+" "+initialBalance);
+            fW.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public Compte (String owner)

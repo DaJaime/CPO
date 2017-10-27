@@ -26,7 +26,7 @@ public final class Main
         CompteManip c2 = cf.createCompteCourant("Jack Bauer");
 
         c1.deposit(1500.0d);
-        double amount = 1900.0d;
+        /*double amount = 1900.0d;
         try {
             double retrait = c1.withdraw(amount);
         }
@@ -36,7 +36,7 @@ public final class Main
             System.out.print("bloc finally");
             LOG.fine("Withdraw operation of " + amount);
         }
-        double newSolde = c2.deposit(100000.0d);
+        double newSolde = c2.deposit(100000.0d);*/
 
         System.out.println(c1);
         LOG.info(c1.toString());

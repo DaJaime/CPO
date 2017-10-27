@@ -4,6 +4,7 @@ import java.util.UUID;
 import java.lang.StringBuilder;
 import java.util.logging.Logger;
 
+
 import model.dec.CompteManip;
 import model.exceptions.InsufficientBalance;
 
