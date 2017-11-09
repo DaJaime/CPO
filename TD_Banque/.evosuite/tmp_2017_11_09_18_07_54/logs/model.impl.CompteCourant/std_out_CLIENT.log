@@ -1,0 +1,96 @@
+* Starting client
+* Connecting to master process on port 2771
+* Analyzing classpath: 
+* Error while initializing target class: Inconsistent stackmap frames at branch target 115
+Exception Details:
+  Location:
+    org/evosuite/instrumentation/BytecodeInstrumentation.transformBytes(Ljava/lang/ClassLoader;Ljava/lang/String;Lorg/evosuite/shaded/org/objectweb/asm/ClassReader;)[B @115: getstatic
+  Reason:
+    Type 'org/evosuite/runtime/util/ComputeClassWriter' (current frame, locals[7]) is not assignable to 'org/evosuite/shaded/org/objectweb/asm/ClassWriter' (stack map, locals[7])
+  Current Frame:
+    bci: @91
+    flags: { }
+    locals: { 'org/evosuite/instrumentation/BytecodeInstrumentation', 'java/lang/ClassLoader', 'java/lang/String', 'org/evosuite/shaded/org/objectweb/asm/ClassReader', integer, 'java/lang/String', integer, 'org/evosuite/runtime/util/ComputeClassWriter', 'org/evosuite/runtime/util/ComputeClassWriter' }
+    stack: { integer }
+  Stackmap Frame:
+    bci: @115
+    flags: { }
+    locals: { 'org/evosuite/instrumentation/BytecodeInstrumentation', 'java/lang/ClassLoader', 'java/lang/String', 'org/evosuite/shaded/org/objectweb/asm/ClassReader', integer, 'java/lang/String', integer, 'org/evosuite/shaded/org/objectweb/asm/ClassWriter', 'org/evosuite/shaded/org/objectweb/asm/ClassVisitor' }
+    stack: { }
+  Bytecode:
+    0x0000000: 0736 04b2 007f 9900 0915 0405 8036 042c
+    0x0000010: b800 853a 0519 05b8 0086 9a00 24bb 0088
+    0x0000020: 59bb 0055 59b7 0056 128a b600 5c19 05b6
+    0x0000030: 005c 128c b600 5cb6 005f b700 8ebf b800
+    0x0000040: 9305 3606 bb00 9559 1506 b700 983a 0719
+    0x0000050: 073a 08b2 0053 b900 9c01 0099 0018 bb00
+    0x0000060: 9e59 1908 bb00 a059 b200 a6b7 00a9 b700
+    0x0000070: ac3a 08b2 00b3 9900 0fbb 00b5 5919 082c
+    0x0000080: b700 b83a 08b2 00bb 9900 16b8 00c1 3a09
+    0x0000090: bb00 c359 1908 2c19 09b7 00c6 3a08 b200
+    0x00000a0: ca09 949b 000e bb00 cc59 1908 b700 cf3a
+    0x00000b0: 0819 05b8 00d4 9900 82b2 0053 bb00 5559
+    0x00000c0: b700 5612 d6b6 005c 1905 b600 5cb6 005f
+    0x00000d0: b900 d902 00b2 00dc 9a00 15b2 00df 9900
+    0x00000e0: 0fbb 00e1 5919 082c b700 e23a 08bb 00e4
+    0x00000f0: 5919 08b7 00e5 3a08 bb00 e759 1908 2cb7
+    0x0000100: 00e8 3a08 bb00 ea59 2b19 082c b700 ed3a
+    0x0000110: 08b2 00f0 9900 0fbb 00f2 5919 082c b700
+    0x0000120: f33a 08b2 00f6 9900 58bb 00f8 5919 082c
+    0x0000130: b700 f93a 08a7 0049 b200 5312 fbb9 00d9
+    0x0000140: 0200 bb00 fd59 1908 2cb7 00fe 3a08 b200
+    0x0000150: df99 000f bb00 e159 1908 2cb7 00e2 3a08
+    0x0000160: b200 4599 001b 1905 b201 01b6 003f 9900
+    0x0000170: 10bb 00ea 592b 1908 2cb7 00ed 3a08 bb01
+    0x0000180: 0359 1908 2cb7 0104 3a08 b200 b399 000b
+    0x0000190: 2c19 08b8 0108 3a08 b801 0d99 000f bb01
+    0x00001a0: 0f59 1908 2cb7 0110 3a08 1905 b200 71b6
+    0x00001b0: 003f 9a00 20b2 0113 b601 169a 000e 1905
+    0x00001c0: b201 13b6 003f 9a00 0c2a 1905 b601 1899
+    0x00001d0: 0112 bb01 1a59 b701 1b3a 092d 1909 1504
+    0x00001e0: b601 21b2 0053 bb00 5559 b700 5613 0123
+    0x00001f0: b600 5c2c b600 5cb6 005f b900 6502 00b2
+    0x0000200: 0126 9900 27bb 0128 5919 09b7 012b 3a0a
+    0x0000210: 2a19 05b7 012c 9a00 0c2a 1905 b601 1899
+    0x0000220: 000a 190a b601 323a 09bb 0134 5919 09b7
+    0x0000230: 0135 3a0a 2a19 05b7 012c 9a00 0c2a 1905
+    0x0000240: b601 1899 001c 190a b601 363a 09bb 0138
+    0x0000250: 5919 09b7 0139 3a0b 190b b601 3a3a 092a
+    0x0000260: 1905 b601 1899 005d b200 53bb 0055 59b7
+    0x0000270: 0056 1301 3cb6 005c 2cb6 005c b600 5fb9
+    0x0000280: 0065 0200 bb01 3e59 1909 2bb7 0141 3a0b
+    0x0000290: 190b b601 423a 09a7 000f 3a0c bb01 4659
+    0x00002a0: 190c b701 49bf b200 53bb 0055 59b7 0056
+    0x00002b0: 1301 4bb6 005c 2cb6 005c b600 5fb9 0065
+    0x00002c0: 0200 1909 1908 b601 4db2 00dc 9900 122c
+    0x00002d0: b801 5299 000b 2a2c 1907 b701 56b0 a700
+    0x00002e0: 0b2d 1908 1504 b601 2119 07b6 015a b0  
+  Exception Handler Table:
+    bci [656, 663] => handler: 666
+  Stackmap Table:
+    append_frame(@15,Integer)
+    append_frame(@62,Object[#31])
+    append_frame(@115,Integer,Object[#174],Object[#176])
+    same_frame(@133)
+    same_frame(@158)
+    same_frame(@177)
+    same_frame(@237)
+    same_frame(@291)
+    same_frame(@312)
+    same_frame(@352)
+    same_frame(@382)
+    same_frame(@408)
+    same_frame(@426)
+    same_frame(@457)
+    same_frame(@466)
+    append_frame(@546,Object[#302],Object[#296])
+    chop_frame(@553,1)
+    append_frame(@582,Object[#308])
+    same_frame(@607)
+    full_frame(@666,{Object[#2],Object[#324],Object[#31],Object[#285],Integer,Object[#31],Integer,Object[#174],Object[#176],Object[#302],Object[#308],Object[#318]},{Object[#124]})
+    same_frame(@678)
+    chop_frame(@706,1)
+    chop_frame(@734,2)
+    same_frame(@737)
+    same_frame(@745)
+
