@@ -1,6 +1,6 @@
 package model.impl;
 
-import model.dec.CompteManip;
+import model.interfaces.CompteManip;
 
 public final class CompteEpargne extends Compte implements CompteManip
 {

@@ -1,4 +1,4 @@
-package model.dec;
+package model.interfaces;
 
 import model.exceptions.InsufficientBalance;
 

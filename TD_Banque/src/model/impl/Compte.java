@@ -4,10 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.String;
-import java.util.Objects;
 import java.util.UUID;
 
-import model.dec.CompteItf;
+import model.interfaces.CompteItf;
 /**
  * Models the concept of back account.
  */

@@ -1,7 +1,6 @@
 package main;
 
-import model.dec.CompteManip;
-import model.exceptions.InsufficientBalance;
+import model.interfaces.CompteManip;
 import model.fact.CompteFactory;
 
 import java.util.logging.ConsoleHandler;

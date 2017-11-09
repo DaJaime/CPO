@@ -1,4 +1,4 @@
-package model.dec;
+package model.interfaces;
 
 public interface CompteItf
 {
