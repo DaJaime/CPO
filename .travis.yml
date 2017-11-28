@@ -1,7 +1,8 @@
 language: java
 jdk: oraclejdk8
 
-sudo: false
+before_install:
+  - chmod 755 ./compile.sh
 
 script:
   - "./compile.sh"
