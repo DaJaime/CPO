@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd TD-Banque/src
+cd TD_Banque/src
 javac main/Main.java -d ../bin/
